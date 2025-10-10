@@ -1,31 +1,27 @@
 #include <stdio.h>
-int main()
-{
+
+int main() {
     int a, b; // Variables for user input
-// Taking input from the user
+
+    // Taking input from the user
     printf("Enter first number: ");
     scanf("%d", &a);
+
     printf("Enter second number: ");
     scanf("%d", &b);
-// Performing relational operations
-    printf("\nRelational Operator Results:\n");
-    if (a == b)
-        printf("a is equal to b\n");
-    else
-        printf("a is not equal to b\n");
-    if (a != b)
-        printf("a is not equal to b\n");
 
-    if (a > b)
-        printf("a is greater than b\n");
+    // Performing arithmetic operations
+    printf("\nAddition (a + b): %d\n", a + b);
+    printf("Subtraction (a - b): %d\n", a - b);
+    printf("Multiplication (a * b): %d\n", a * b);
 
-    if (a < b)
-        printf("a is less than b\n");
-    if (a >= b)
-        printf("a is greater than or equal to b\n");
+    // Checking for division by zero before performing division
+    if (b != 0) {
+        printf("Division (a / b): %d\n", a / b);
+        printf("Modulus (a %% b): %d\n", a % b);
+    } else {
+        printf("Division and modulus not possible (b = 0)\n");
+    }
 
-    if (a <= b)
-        printf("a is less than or equal to b\n");
-
-
+    return 0;
 }
